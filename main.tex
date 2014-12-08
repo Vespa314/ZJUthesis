@@ -1,0 +1,207 @@
+\documentclass[oneside]{ZJUthesis}
+
+% 该文档中首字符为“%”的均为注释行，不会在论文中出现
+
+% 论文默认为双面模式，需单面模式请将第一行换为如下所示：
+% \documentclass[oneside]{ZJUthesis}
+
+% 取消目录中链接的颜色，方便打印
+% 如需颜色，请将“false”改为“true”
+\hypersetup{colorlinks=false}
+
+%\usepackage[sectionbib]{chapterbib}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文字体设定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fangsong
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 论文封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 中文封面内容
+
+% 中图分类号
+\classification{TM863}
+
+% 单位代码
+\serialnumber{10335}
+
+% 密级，如需密级则将其前“%”去掉
+%\SecretLevel{绝密}
+
+% 学号
+\PersonalID{127436}
+
+\title{标题}
+% 如果标题一行写不下，就写成两行，在下面的命令里写第二行，不需要两行则注释掉
+%\titletl{第二版}
+
+
+%英文题目
+\Etitle{Title}
+% 如果一行写不下，同中文题目设定，一行写不下则写两行，不需要就注释掉
+%\Etitletl{The Second Edition}
+
+% 作者
+\author{作者}
+
+\degree{硕士}
+
+% 导师
+\supervisor{导师}
+
+% 合作导师，如果有的话，去掉注释，
+%\cpsupervisor{某 \quad某某}
+
+% 专业名称
+\major{专业}
+
+% 研究方向
+\researchdm{研究方向}
+
+% 所属学院
+\institute{XX系}
+
+%论文提交日期
+\submitdate{2014年12月8日}
+
+% 答辨日期
+\defenddate{2014年12月8日}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 中文题名页内容
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 论文评阅人信息 注意两字名与三字名，两字职称与三字职称的写法，便于对齐
+% 多余的名额直接注释掉即可，比如三个评阅人，把评阅人D，E注释掉即可
+\reviewersA{丘处机\hspace{1.5em}真人\hspace{1.5em}登州滨都宫\hspace{1em}}
+\reviewersB{葛\quad 洪\hspace{1.5em}方士\hspace{1.5em}罗浮山道观\hspace{1em}}
+\reviewersC{寇谦之\hspace{1.5em}天师\hspace{1.5em}嵩山中岳道场}
+\reviewersD{张三丰\hspace{1.5em}真君\hspace{1.5em}武当玉虚宫\hspace{1em}}
+\reviewersE{孙玄清\hspace{1.5em}真人\hspace{1.5em}崂山明霞洞\hspace{1em}}
+
+% 答辩委员会信息，如果某一个单位比较长，
+% 请在其它较短后面补上{hspace{Xem}}，X是比最长的单位名少几个字
+% 如果实际人数少于6人，多余的注释掉即可
+\chairman{唐三藏\hspace{1.5em}功佛\hspace{1.5em}洛阳大慈恩寺}
+\commissionerA{惠\quad 能\hspace{1.5em}方丈\hspace{1.5em}曹溪宝林寺\hspace{1em}}
+\commissionerB{智\quad 顗\hspace{1.5em}方丈\hspace{1.5em}天台山国清寺}
+\commissionerC{法\quad 藏\quad 大和尚\quad 洛阳佛授记寺}
+\commissionerD{道\quad 济\hspace{1.5em}和尚\hspace{1.5em}临安灵隐寺\hspace{1em}}
+\commissionerE{降\quad 龙\hspace{1.5em}尊者\hspace{1.5em}天竺大雷音寺}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 英文封面内容，硕士论文可不要此页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 英文题名
+\englishtitle{Title}
+% 如果题名一行写不下，就写到第二行，不需要则将其注释掉
+\englishtitletl{The Second Edition}
+
+% 评阅人信息，名字，职称，单位尽量用简写，否则会写不下
+\EreviewersA{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EreviewersB{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EreviewersC{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EreviewersD{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EreviewersE{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+
+% 答辩委员会信息，同样尽量用简写，否则会写不下
+\Echairman{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EcommissionerA{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EcommissionerB{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EcommissionerC{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EcommissionerD{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+\EcommissionerE{Name\hspace{1.5em}Professional Title\hspace{1.5em}Organization}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 原创声明与版权协议页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SignautreDateA{2013}{10}{11}
+\SignautreDateB{2013}{10}{11}
+\SignautreDateC{2013}{10}{11}
+
+
+% 生成封面
+\makeCoverPage
+% 生成中文题名页
+\maketitle
+% 生成英文封面
+\makeenglishtitle
+% 生成原创声明与版权协议页
+\makeOSandCPRTpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 论文部分开始
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUfrontmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 摘要
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./Chapters/abstractC}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 英文摘要
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./Chapters/abstractE}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 目录页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 插图列表
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUListofFigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 表格列表
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUListofTables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文内容部分开始
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUmainmatter
+
+\include{./Chapters/chap1}
+%\include{./Chapters/chap2}
+%\include{./Chapters/chap3}
+%\include{./Chapters/chap4}
+%\include{./Chapters/chap5}
+%\include{./Chapters/chap6}
+
+\ZJUbackmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 参考文献
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUthesisbib{thesisbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 个人简历
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./Chapters/resume}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 发表论文目录
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./Chapters/publications}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 致谢页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./Chapters/thanks}
+
+\end{document}
