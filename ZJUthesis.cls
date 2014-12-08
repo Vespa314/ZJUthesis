@@ -42,7 +42,7 @@
 % 设置图片，表格头字体选项。间距10pt，字号为小字号，加粗字体，标题与题目间距1个字符
 \RequirePackage[margin=10pt,font={small,bf},labelsep=quad]{caption}
 % 粗线型表格需要的扩展包
-\RequirePackage{booktabs-de}
+%\RequirePackage{booktabs-de}
 % 计算宽度使用的包
 \RequirePackage{calc}
 % 合并表格行用到的包
