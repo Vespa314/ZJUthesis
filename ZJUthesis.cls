@@ -3,12 +3,12 @@
 %% 王东举于2013年撰写博士论文期间，根据上一版本反馈意见，对其进行增补修订。
 %% 该模板修订部分，主要是出现了两个版本
 %% GBK版本和UTF-8版本
-%% 
+%%
 %% 本模版是在88TeX版提供的数学系毕业论文模版2006年版基础上
 %% 由王东举于2011年9-10月间修改出第一版，欢迎提出修改意见，欢迎在此基础上自行修改尝试
 %% 邮箱：shuwei1204@163.com
-%% 
-%% 
+%%
+%%
 %% 提供该模版的运行基础
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 % 版本说明
@@ -245,13 +245,13 @@ includehead, includefoot]{geometry}
         \includegraphics[width=22.8mm]{./CoverPagepic/QSY.eps}    \\
       \fi
     \end{center}
- 
+
       \vspace{2mm}
 
     \begin{center}
       % 论文题目部分内容，可以修改
       \begin{tabular}{rl}
-        {\bfseries\fangsong\zihao{3}\ZJU@label@title:} 
+        {\bfseries\fangsong\zihao{3}\ZJU@label@title:}
         &
         \bfseries\fangsong\zihao{-2} \ZJUunderline[260pt]{\ZJU@value@title} \\[3mm]
         &
@@ -261,7 +261,7 @@ includehead, includefoot]{geometry}
         \else
           {\bfseries\fangsong\zihao{-2}\ZJUunderline[260pt]{\ZJU@value@titletl}}
         \fi \\[4mm]
-        {\bfseries\fangsong\zihao{3}\ZJU@label@Etitle:} 
+        {\bfseries\fangsong\zihao{3}\ZJU@label@Etitle:}
         &
         {\bf\zihao{-2}\ZJUunderline[260pt]{\ZJU@value@Etitle}}\\[3mm]
         &
@@ -274,7 +274,7 @@ includehead, includefoot]{geometry}
       \end{tabular}
 
       % 这个距离可以修改
-      \vspace{15mm}  
+      \vspace{15mm}
 
       % 左右两边字体不同，定义两个宏AB来简化代码，这个功能用到了array宏包
       \newcolumntype{A}{>{\songti}r<{}}
@@ -354,11 +354,11 @@ includehead, includefoot]{geometry}
            \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch_s.eps}}
       \fi
       {\bfseries\songti\zihao{3}\textcolor{white}{。}}\\
- 
-            
+
+
       % 插入空白
       \vspace{15mm}
-      
+
       % 评阅人信息
       \newcolumntype{A}{>{\songti\zihao{4}}r}
       \newcolumntype{B}{>{\songti\zihao{4}}c}
@@ -369,7 +369,7 @@ includehead, includefoot]{geometry}
         评阅人4 & \ZJUunderline[260pt]{\ZJU@value@reviewersD}\\[2.2mm]
         评阅人5 & \ZJUunderline[260pt]{\ZJU@value@reviewersE}\\
       \end{tabular}
-    
+
       % 加一段空白
       \vspace{10mm}
 
@@ -412,7 +412,7 @@ includehead, includefoot]{geometry}
   \cleardoublepage
   \thispagestyle{empty}
   {
-    \linespread{1.3} 
+    \linespread{1.3}
     \begin{center}
       % 英文论文题目
       {\bf\zihao{-2}\ZJUunderline[340pt]{\ZJU@value@englishtitle}\\
@@ -453,7 +453,7 @@ includehead, includefoot]{geometry}
       \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_en_s.eps}}\\
       \fi}
     \end{center}
-  
+
     % 加入一段空白
     \vspace{7mm}
 
@@ -485,7 +485,7 @@ includehead, includefoot]{geometry}
 
     % 加一段空白
     \vfill
-    % 答辩日期  
+    % 答辩日期
     {\hfill Date of oral defence:\ZJUunderline[150pt]{\ZJU@value@defenddate}\hspace{3em}}
   }
 }
@@ -679,6 +679,15 @@ includehead, includefoot]{geometry}
 \newenvironment{publications}
   {\Nchapter{\ZJU@label@publications}}
   {}
+
+\makeatletter
+\renewcommand{\numberline}[1]{%
+\settowidth\@tempdimb{#1\hspace{0.5em}}%
+\ifdim\@tempdima<\@tempdimb%
+  \@tempdima=\@tempdimb%
+\fi%
+\hb@xt@\@tempdima{\@cftbsnum #1\@cftasnum\hfil}\@cftasnumb}
+\makeatother
 
 
 
