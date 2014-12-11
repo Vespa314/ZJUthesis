@@ -18,8 +18,10 @@
 \ProcessOptions
 % 2009/09/13的v0.94及之后版本提供了hyperref的支持，直接写入选项即可
 \LoadClass[cs4size,a4paper,fancyhdr,hyperref]{ctexbook}[2009/09/13]
-%% math packages 数学公式包，非数学系可无视之
-\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm}
+%% math packages 数学公式包
+%% tbtags：多行公式标号放底部
+\RequirePackage[tbtags]{amsmath}
+\RequirePackage{amsthm,amsfonts,amssymb,bm}
 %% graphicx packages，psgrag用于修改eps图中的信息，但与dvipdfm不兼容
 \RequirePackage{graphicx}
 % 需要times包，让英文字体看起来更像windows下
@@ -49,6 +51,8 @@
 \RequirePackage{multirow}
 % 颜色包
 \RequirePackage{xcolor}
+% 希腊字母
+\RequirePackage{upgreek}
 % PDF文档超链接及书签标记，具体选项意义参考hyperref说明文档
 % hyperref包要2011年版的才行
 \hypersetup{CJKbookmarks=true,%
