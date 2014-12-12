@@ -30,7 +30,8 @@
 % 需要array包，排姓名导师信息时用
 \RequirePackage{array}
 % 需要tocloft包，调整目录显示格式时使用，LaTeX2e默认的格式不符合模版要求
-\RequirePackage[titles]{tocloft}
+\RequirePackage{subfigure}
+\RequirePackage[titles,subfigure]{tocloft}
 % tocloft包需要tocbibind包来配合，同时tocloft包需要titles参数来将其置为chapter title
 \RequirePackage[chapter]{tocbibind}
 % 需要索引功能，加入索引包
