@@ -41,7 +41,7 @@
 % longnamesfirst参数用于处理长人名顺序，将first name排前面，用于外国人名
 % square参数，引用标号用方括号括起
 % super参数，引用标号为上标格式
-\RequirePackage[sort&compress,longnamesfirst,square,super]{natbib}
+\RequirePackage[sort&compress,longnamesfirst,square,super,numbers]{natbib}
 % 设置图片，表格头字体选项。间距10pt，字号为小字号，加粗字体，标题与题目间距1个字符
 \RequirePackage[margin=10pt,font={small,bf},labelsep=quad]{caption}
 % 粗线型表格需要的扩展包
