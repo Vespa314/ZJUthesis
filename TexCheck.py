@@ -35,6 +35,33 @@ def GetLabelDict(rootPath,Pre):
 	    		labelDict[label] = [[line,filename]]
 	return labelDict
 
+def GetBibDict(rootPath):
+	at_Flag = False
+	curlabel = ""
+	bibDict = {}
+	curLineNum = -1;
+	for filename in os.listdir(rootPath):
+	    if not filename.endswith("bib"):
+	        continue
+	    for (linenum,line) in enumerate(open(rootPath+os.sep+filename)):
+	    	find = re.findall(r"@\w+\s*\{([^,]*),",line)
+	    	if find:
+	    		if at_Flag:
+	    			raise NameError,"\n\nTitle Not Found:"+curlabel+"\n\n"
+	    		else:
+	    			at_Flag = True
+	    			curlabel = find[0]
+	    			curLineNum = linenum+1
+	    		continue
+	    	find = re.findall(r"^\s*title\s*=\s*[\{|\"]([^\}\"]*)[\}|\"]",line)
+	    	if find:
+	    		if bibDict.has_key(curlabel):
+	    			bibDict[curlabel].append([curLineNum,filename,find[0]])
+	    		else:
+	    			bibDict[curlabel] = [[curLineNum,filename,find[0]]]
+	    		at_Flag = False
+	return bibDict
+
 ############### Main
 if __name__ == "__main__":
 	rootPath = "./"
@@ -67,6 +94,23 @@ if __name__ == "__main__":
 	if not hasLabelRepeat:
 		print "[OK!]All Label Used is Defined!!\n"
 
+	# Check Bib Label Repeat
+	bibDict = GetBibDict(rootPath)
+	bibLabelUsed = GetLabelDict(rootPath,"cite")
+	for label in bibLabelUsed:
+		print label
+	hasBibLabelUndefined = False
+	for label in bibDict:
+		if len(bibDict[label]) > 1:
+			hasBibLabelUndefined = True
+			print "======================================================="
+			print "Bib Label %s is Redefined in these lines:\n"%(label)
+			for item in bibDict[label]:
+				print "<<%s>>\nLine:%s\nFile:%s\n"%(item[2],item[0],item[1])
+
+
+	if not hasBibLabelUndefined:
+		print "[OK!]No Label Definition Used in *bib is Repeat!!\n"
 	print "Finished!!"
 
 
