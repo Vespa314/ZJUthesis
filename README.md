@@ -5,13 +5,12 @@
 
 修改内容详见commits
 
-练手性质补充：
-
-`TexCheck.py`:
+## `TexCheck.py`:
 
 * 检测重复label【已完成】
-
-* 检测重复bib文献【待施工】
+* 检测label ref是否全部定义【已完成】
+* 检测重复bib文献【已完成】
+* 检测cite引用是否全部定义【已完成】
 
 
 
