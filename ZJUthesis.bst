@@ -531,7 +531,7 @@ FUNCTION {n.dashify}
 
 FUNCTION {word.in}
 {
-"//"
+", "
 }
 
 FUNCTION {format.date}
