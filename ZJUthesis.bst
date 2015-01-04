@@ -950,7 +950,7 @@ FUNCTION {article}
 { output.bibitem
   format.authors "author" output.check
   new.block
-  format.title "title" output.check
+  title "title" output.check
   "[J]" *
   new.block
   crossref missing$
@@ -1014,7 +1014,7 @@ FUNCTION {booklet}
 { output.bibitem
   format.authors output
   new.block
-  format.title "title" output.check
+  title "title" output.check
   new.block
   howpublished "howpublished" bibinfo.check output
   address "address" bibinfo.check output
@@ -1032,7 +1032,7 @@ FUNCTION {EPublication}
   output.bibitem
   format.authors "author" output.check
   new.block
-  format.title "title" output.check
+  title "title" output.check
   "[" * type * "]" *
   new.block
   format.address.publisher.gb output
@@ -1102,7 +1102,7 @@ FUNCTION {incollection}
 { output.bibitem
   format.authors "author" output.check
   new.block
-  format.title "title" output.check
+  title "title" output.check
   new.block
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
@@ -1130,7 +1130,7 @@ FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
   new.block
-  format.title "title" output.check
+  title "title" output.check
   "[C]" *
   crossref missing$
     {
