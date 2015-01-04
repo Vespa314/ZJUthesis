@@ -617,7 +617,7 @@ includehead, includefoot]{geometry}
   \renewcommand{\cftsecpagefont}{\rm\zihao{-4}}
   \setlength{\cftbeforechapskip}{-2pt}
   \setlength{\cftbeforesecskip}{-2pt}
-  \setlength{\cftsecindent}{0pt}
+  \setlength{\cftsecindent}{20pt}
   \setcounter{tocdepth}{1}
   \addtocontents{toc}{\cftpagenumbersoff{chapter}}
   \tableofcontents
