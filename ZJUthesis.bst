@@ -970,7 +970,7 @@ FUNCTION {article}
     { format.journal.eid }
   if$
   format.issn output
-  format.doi output
+  
   new.block
   format.note output
   fin.entry
@@ -1154,7 +1154,6 @@ FUNCTION {inproceedings}
   date.block
     format.pages "pages"
      add.check
-  format.doi output
   new.block
   format.note output
   fin.entry
