@@ -7,7 +7,7 @@ Created on Mon Dec 29 21:18:24 2014
 import os
 import re
 
-def GetFileType(path,Filetype):
+def GetFileType(rootPath,Filetype):
     for path,subdir,files in os.walk(rootPath,topdown=False):
     	if len(files) == 0 or path.find(".") > 0:
     		continue
