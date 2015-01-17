@@ -606,6 +606,11 @@ includehead, includefoot]{geometry}
 \newcommand\ZJUcontents{%
   % 修改目录的格式
   \renewcommand{\cftchapfont}{\fangsong\zihao{-4}}
+  \renewcommand{\cftsecpagefont}{\rm\zihao{-4}}
+  \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdot}}
+  \renewcommand{\cftsubsecfont}{\fangsong\zihao{-4}}
+  \renewcommand{\cftsubsecdotsep}{\cftdotsep}
+  \renewcommand{\cftsubsecpagefont}{\rm\zihao{-4}}
   \renewcommand{\cftchapleader}{\cftdotfill{\cftdot}}
   \renewcommand{\cftchapdotsep}{\cftdotsep}
   \renewcommand{\cftchappagefont}{\rm\zihao{-4}}
@@ -616,8 +621,10 @@ includehead, includefoot]{geometry}
   \renewcommand{\cftsecpagefont}{\rm\zihao{-4}}
   \setlength{\cftbeforechapskip}{-2pt}
   \setlength{\cftbeforesecskip}{-2pt}
-  \setlength{\cftsecindent}{20pt}
-  \setcounter{tocdepth}{1}
+  \setlength{\cftbeforesubsecskip}{-2pt}
+  \setlength{\cftsecindent}{2em}
+  \setlength{\cftsubsecindent}{4em}
+  \setcounter{tocdepth}{2}
   \addtocontents{toc}{\cftpagenumbersoff{chapter}}
   \tableofcontents
   \addtocontents{toc}{\cftpagenumberson{chapter}}
