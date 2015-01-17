@@ -258,23 +258,23 @@ includehead, includefoot]{geometry}
       \begin{tabular}{rl}
         {\bfseries\fangsong\zihao{3}\ZJU@label@title:}
         &
-        \bfseries\fangsong\zihao{-2} \ZJUunderline[260pt]{\ZJU@value@title} \\[3mm]
+        \bfseries\fangsong\zihao{-2} \ZJUunderline[280pt]{\ZJU@value@title} \\[3mm]
         &
         % 这个地方是做第二行标题的判断，如果标题一行写不下，有第二行则显示，否则不显示
         \ifx\ZJU@value@titletl\undefined
           \hfil
         \else
-          {\bfseries\fangsong\zihao{-2}\ZJUunderline[260pt]{\ZJU@value@titletl}}
+          {\bfseries\fangsong\zihao{-2}\ZJUunderline[280pt]{\ZJU@value@titletl}}
         \fi \\[4mm]
         {\bfseries\fangsong\zihao{3}\ZJU@label@Etitle:}
         &
-        {\bf\zihao{-2}\ZJUunderline[260pt]{\ZJU@value@Etitle}}\\[3mm]
+        {\bf\zihao{-2}\ZJUunderline[320pt]{\ZJU@value@Etitle}}\\[3mm]
         &
         %同样是英文标题的多行判断，如果一行写不下，有第二行显示，否则不显示第二行
         \ifx\ZJU@value@Etitletl\undefined
           \hfil
         \else
-          {\bf\zihao{-2}\ZJUunderline[260pt]{\ZJU@value@Etitletl}}
+          {\bf\zihao{-2}\ZJUunderline[320pt]{\ZJU@value@Etitletl}}
         \fi\\
       \end{tabular}
 
@@ -345,18 +345,18 @@ includehead, includefoot]{geometry}
       {\bfseries\songti\zihao{3}
       论文作者签名：
       \ifpdf
-          \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch.pdf}}
+          \ZJUunderline[120pt]{}%\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch.pdf}}
       \else
-          \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch.eps}}
+          \ZJUunderline[120pt]{}%\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch.eps}}
       \fi
       {\bfseries\songti\zihao{3}\textcolor{white}{。}}\\
 
       %\hfil\\
       指导教师签名：}
       \ifpdf
-           \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch_s.pdf}}
+           \ZJUunderline[120pt]{}%\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch_s.pdf}}
       \else
-           \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch_s.eps}}
+           \ZJUunderline[120pt]{}%\includegraphics[width=100pt,height=45pt]{./Signature/sign_ch_s.eps}}
       \fi
       {\bfseries\songti\zihao{3}\textcolor{white}{。}}\\
 
@@ -390,7 +390,7 @@ includehead, includefoot]{geometry}
 
     \end{center}
     % 加一段可变空白
-      \vfil
+     \vfil
     % 答辩时间
       {\songti\zihao{4}\hfill\ZJU@label@defenddate%
       \ZJUunderline[150pt]{\ZJU@value@defenddate}\hspace{3em}}
@@ -426,7 +426,7 @@ includehead, includefoot]{geometry}
       \ifx\ZJU@value@englishtitletl\undefined
         \hfil
       \else
-        \ZJUunderline[300pt]{\ZJU@value@englishtitletl}
+        \ZJUunderline[340pt]{\ZJU@value@englishtitletl}
       \fi}
 
       % 插入一段空白距离
@@ -445,17 +445,17 @@ includehead, includefoot]{geometry}
       % 作者英文签名
       {\bf\zihao{3}\hspace{1.7em}Author's signature:
       \ifpdf
-      \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_en.pdf}}\\
+      \ZJUunderline[120pt]{}\\%\includegraphics[width=100pt,height=45pt]{./Signature/sign_en.pdf}}\\
       \else
-      \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_en.eps}}\\
+      \ZJUunderline[120pt]{}\\%\includegraphics[width=100pt,height=45pt]{./Signature/sign_en.eps}}\\
       \fi
       %\hfil\\
       % 导师英文签名
       Supervisor's signature:
       \ifpdf
-      \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_en_s.pdf}}\\
+      \ZJUunderline[120pt]{}\\%\includegraphics[width=100pt,height=45pt]{./Signature/sign_en_s.pdf}}\\
       \else
-      \ZJUunderline[120pt]{\includegraphics[width=100pt,height=45pt]{./Signature/sign_en_s.eps}}\\
+      \ZJUunderline[120pt]{}\\%\includegraphics[width=100pt,height=45pt]{./Signature/sign_en_s.eps}}\\
       \fi}
     \end{center}
 
@@ -467,27 +467,26 @@ includehead, includefoot]{geometry}
     %\newcolumntype{A}{>{\zihao{4}}r}
     %\newcolumntype{B}{>{\zihao{4}}c}
     \begin{tabular}{rc}
-      External Reviewers: & \ZJUunderline[260pt]{\ZJU@value@EreviewersA}\\[1.2mm]
-      & \ZJUunderline[260pt]{\ZJU@value@EreviewersB}\\[1.2mm]
-      & \ZJUunderline[260pt]{\ZJU@value@EreviewersC}\\[1.2mm]
-      & \ZJUunderline[260pt]{\ZJU@value@EreviewersD}\\[1.2mm]
-      & \ZJUunderline[260pt]{\ZJU@value@EreviewersE}\\
+      Thesis reviewer1: & \ZJUunderline[260pt]{\ZJU@value@EreviewersA}\\[1.2mm]
+      Thesis reviewer1: & \ZJUunderline[260pt]{\ZJU@value@EreviewersB}\\[1.2mm]
+      Thesis reviewer1: & \ZJUunderline[260pt]{\ZJU@value@EreviewersC}\\[1.2mm]
+      Thesis reviewer1: & \ZJUunderline[260pt]{\ZJU@value@EreviewersD}\\[1.2mm]
+      Thesis reviewer1: & \ZJUunderline[260pt]{\ZJU@value@EreviewersE}\\
     \end{tabular}
 
     % 加入一段空白
     \vspace{6mm}
 
     % 答辩委员会名单（英文）
-    ~\\[1.2mm]
-    \hbox to 2.4em{}Examining Committee Chairperson:\\[1.2mm]
-    \hbox to 11.4em{}\ZJUunderline[260pt]{\ZJU@value@Echairman}\\[1.2mm]
-    \hbox to 2.4em{}Examining Committee Members:\\[1.2mm]
-    \hbox to 11.4em{}\ZJUunderline[260pt]{\ZJU@value@EcommissionerA}\\[1.2mm]
-    \hbox to 11.4em{}\ZJUunderline[260pt]{\ZJU@value@EcommissionerB}\\[1.2mm]
-    \hbox to 11.4em{}\ZJUunderline[260pt]{\ZJU@value@EcommissionerC}\\[1.2mm]
-    \hbox to 11.4em{}\ZJUunderline[260pt]{\ZJU@value@EcommissionerD}\\[1.2mm]
-    \hbox to 11.4em{}\ZJUunderline[260pt]{\ZJU@value@EcommissionerE}\\
-
+    \begin{tabular}{rc}
+      Chair: & \ZJUunderline[260pt]{\ZJU@value@Echairman}\\[1.2mm]
+      Committeeman1: & \ZJUunderline[260pt]{\ZJU@value@EcommissionerA}\\[1.2mm]
+      Committeeman2: & \ZJUunderline[260pt]{\ZJU@value@EcommissionerB}\\[1.2mm]
+      Committeeman3: & \ZJUunderline[260pt]{\ZJU@value@EcommissionerC}\\[1.2mm]
+      Committeeman4: & \ZJUunderline[260pt]{\ZJU@value@EcommissionerD}\\[1.2mm]
+      Committeeman5: & \ZJUunderline[260pt]{\ZJU@value@EcommissionerE}\\
+    \end{tabular}
+    
     % 加一段空白
     \vfill
     % 答辩日期
