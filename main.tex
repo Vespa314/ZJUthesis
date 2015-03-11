@@ -99,7 +99,7 @@
 %% 英文封面内容，硕士论文可不要此页
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 英文题名
-\englishtitle{Title}
+%\englishtitle{Title}
 % 如果题名一行写不下，就写到第二行，不需要则将其注释掉
 \englishtitletl{The Second Edition}
 
@@ -145,6 +145,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ZJUfrontmatter
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 致谢页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./Chapters/thanks}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 摘要
@@ -157,11 +161,6 @@
 \include{./Chapters/abstractE}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 目录页
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ZJUcontents
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 插图列表
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ZJUListofFigures
@@ -172,16 +171,22 @@
 \ZJUListofTables
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 目录页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 正文内容部分开始
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ZJUmainmatter
 
 \include{./Chapters/chap1}
-%\include{./Chapters/chap2}
-%\include{./Chapters/chap3}
-%\include{./Chapters/chap4}
-%\include{./Chapters/chap5}
-%\include{./Chapters/chap6}
+\include{./Chapters/chap2}
+\include{./Chapters/chap3}
+\include{./Chapters/chap4}
+\include{./Chapters/chap5}
+\include{./Chapters/chap6}
 
 \ZJUbackmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,9 +204,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{./Chapters/publications}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 致谢页
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{./Chapters/thanks}
+
 
 \end{document}
