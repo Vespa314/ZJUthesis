@@ -63,6 +63,7 @@
             pdfstartview=FitH,
                hidelinks
          }
+
 % 文档开始导入默认配置
 \AtBeginDocument{\makeatletter\input{ZJUthesis.cfg}\makeatother}
 
