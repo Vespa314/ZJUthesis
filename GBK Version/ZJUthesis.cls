@@ -484,7 +484,7 @@ includehead, includefoot]{geometry}
       Committeeman4: & \ZJUunderline[260pt]{\ZJU@value@EcommissionerD}\\[1.2mm]
       Committeeman5: & \ZJUunderline[260pt]{\ZJU@value@EcommissionerE}\\
     \end{tabular}
-
+    
     % 加一段空白
     \vfill
     % 答辩日期
@@ -736,4 +736,5 @@ includehead, includefoot]{geometry}
 \endinput
 %%
 %% End of file `ZJUthesis.cls'.
+
 
